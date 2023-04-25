@@ -3,17 +3,17 @@ import java.util.Comparator;
 public class PersonComparat implements Comparator<Person> {
     @Override
     public int compare(Person o1, Person o2) {
-        if (o1.surname.length() < o2.surname.length()){
+        if (o1.surname.length() > o2.surname.length()) {
             return -1;
-        } else if (o1.surname.length() > o2.surname.length()){
+        } else if (o1.surname.length() < o2.surname.length()) {
             return 1;
         } else {
-            if (o1.age < o2.age){
+            if (o1.age > o2.age) {
                 return -1;
-            } else if (o1.age >= o2.age){
+            } else if (o1.age < o2.age) {
                 return 1;
             }
-            return  ;
+            return 0;
         }
     }
 
