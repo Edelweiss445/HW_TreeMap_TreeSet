@@ -10,11 +10,14 @@ public class Main {
         people.add(new Person("Крендель", "Джавин Магомед Ильхам", 32));
         people.add(new Person("Христофер", "Букин Кукин", 29));
         people.add(new Person("Леонардо", "ди сер Пье́ро да Ви́нчи", 18));
+        people.add(new Person("Наруто", "Минато Джирайя Какаши Сарутоби", 14));
+        people.add(new Person("Напалеон", "Бонапарт", 16));
 
         System.out.println(people);
 
-
+        people.removeIf(person -> person.getAge() < 18);
         Collections.sort(people,  new PersonComparat(3));
+
         System.out.println(people);
     }
 }
